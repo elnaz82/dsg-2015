@@ -13,7 +13,6 @@ $(document).ready(function () {
 
   $('[data-toggle="site-menu"]').click(function () {
     $('html').toggleClass('openNav');
-    $('.main-nav-section').css('min-height', $('html').height());
   });
 
   $('.main-nav-section').on('click', 'li', function(e) {

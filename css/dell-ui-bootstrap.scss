@@ -814,6 +814,7 @@ pre {
 }
 
 @import 'partials/grids';
+@import 'partials/grids-custom';
 
 table {
   background-color: transparent;
@@ -10407,9 +10408,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   margin: 0px 0px 10px 0px;
 }
 
-h1 strong, .h1 strong, h2 strong, .h2 strong, h3 strong, .h3 strong, h4 strong, .h4 strong {
+/*h1 strong, .h1 strong, h2 strong, .h2 strong, h3 strong, .h3 strong, h4 strong, .h4 strong {
   font-weight: normal;
-}
+}*/
 
 h1, .h1, h2, .h2, h3, .h3 {
   font-family: 'museo-sans-for-dell-300', 'Trebuchet MS', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;

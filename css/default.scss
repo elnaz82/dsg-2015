@@ -1,5 +1,6 @@
 .bg-light-grey {
   background-color: #f9f9f9;
+  color: #444;
 }
 
 .pt-20 {
@@ -30,7 +31,7 @@
   background: url("/images/sprites.png") 0 0 no-repeat;
   width: 20px;
   height: 20px;
-  display: inline-block;
+  display: block;
 
   &.twitter {
 
@@ -60,6 +61,8 @@
     display: none;
   }
   >span {
+    display: inline-block;
+    margin-top: -2px;
     vertical-align: top;
   }
 }
@@ -72,6 +75,16 @@ ul {
       list-style-image: url("/images/bullet-check-mark.png");
     }
   }
+}
+
+.text-sm {
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.text-md {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @media (max-width: 767px) {

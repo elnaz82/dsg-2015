@@ -7102,9 +7102,9 @@ input.search-query {
   padding-left: 4px \9;
   /* IE7-8 doesn't have border-radius, so don't indent the padding */
   margin-bottom: 0;
-  -webkit-border-radius: 15px;
+  /*-webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-  border-radius: 15px; }
+  border-radius: 15px;*/ }
 
 /* Allow for input prepend/append in search forms */
 .form-search .input-append .search-query, .form-search .input-prepend .search-query {

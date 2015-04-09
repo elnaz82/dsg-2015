@@ -1,4 +1,16 @@
 $(document).ready(function () {
+  var pageWidth = $('html').width();
+
+  if(pageWidth < 768) { //XS
+    $('.main-nav-section').on('click', '.subLinks > a', function(e) {
+      e.preventDefault();
+    });
+
+    $('.footer-top-section').on('click', 'a[href=#]', function(e) {
+      e.preventDefault();
+    });
+  }
+
   $('[data-toggle="site-menu"]').click(function () {
     $('html').toggleClass('openNav');
     $('.main-nav-section').css('min-height', $('html').height());

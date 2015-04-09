@@ -1,5 +1,6 @@
 .bg-light-grey {
-  background-color: #f9f9f9; }
+  background-color: #f9f9f9;
+  color: #444; }
 
 .pt-20 {
   padding-top: 20px; }
@@ -23,7 +24,7 @@
   background: url("/images/sprites.png") 0 0 no-repeat;
   width: 20px;
   height: 20px;
-  display: inline-block; }
+  display: block; }
   .dsg-icon.facebook {
     background-position: -40px 0; }
   .dsg-icon.linkedin {
@@ -42,12 +43,22 @@
   .social-media-toolbar .dsg-icon-title {
     display: none; }
   .social-media-toolbar > span {
+    display: inline-block;
+    margin-top: -2px;
     vertical-align: top; }
 
 ul.bullet-check-mark {
   padding-left: 2em; }
   ul.bullet-check-mark li {
     list-style-image: url("/images/bullet-check-mark.png"); }
+
+.text-sm {
+  font-size: 11px;
+  line-height: 15px; }
+
+.text-md {
+  font-size: 16px;
+  line-height: 24px; }
 
 @media (max-width: 767px) {
   #right-rail-form label {

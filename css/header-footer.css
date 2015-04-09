@@ -39,7 +39,7 @@
       text-decoration: none; }
   .masthead .form-control {
     display: inline;
-    border-radius: 0; }
+    /*border-radius: 0;*/ }
   .masthead .svg-icon-dell {
     margin-left: 10px;
     font-size: 40px;
@@ -132,7 +132,11 @@
     padding: 10px 15px;
     background-color: white;
     border-top: 1px solid #ffffff;
-    border-bottom: 4px solid #007db8; }
+    border-bottom: 4px solid #007db8;
+    /*input {
+      -ms-border-radius: 0;
+      border-radius: 0;
+    }*/ }
     .masthead .search-container.open-search {
       display: block; }
       .masthead .search-container.open-search + ul .mobile-search-button {
@@ -145,8 +149,8 @@
       padding-left: 14px;
       padding-left: 4px \9;
       margin-bottom: 0;
-      -webkit-border-radius: 15px;
-      -moz-border-radius: 15px;
+      /*-webkit-border-radius: 15px;
+      -moz-border-radius: 15px;*/
       height: 30px; }
     .masthead .search-container .btn {
       position: absolute;
@@ -154,9 +158,6 @@
       right: 15px;
       padding: 5px 12px;
       background: #007db8; }
-    .masthead .search-container input {
-      -ms-border-radius: 0;
-      border-radius: 0; }
     .masthead .search-container .autocomplete {
       position: relative;
       z-index: 9999;
@@ -200,7 +201,7 @@ footer {
   color: #fff;
   margin-top: 20px; }
   footer a {
-    padding: 10px 0 9px 20px;
+    /*padding: 10px 0 9px 20px;*/
     display: block; }
   footer li {
     list-style-type: none; }
@@ -289,18 +290,20 @@ footer {
     padding: 10px 15px 0 15px;
     font-size: 11px;
     overflow: hidden; }
+    footer .footer-bottom-section a, footer .footer-bottom-section span {
+      padding: 10px 0 9px 5px; }
     footer .footer-bottom-section .list-inline > li a {
       color: white; }
     footer .footer-bottom-section span {
-      display: block;
-      padding: 10px 0 9px 20px; }
+      display: block; }
+  footer .footer-top-section a {
+    padding: 10px 0 9px 20px; }
   footer .dropdown-toggle:after {
     padding-left: 5px; }
   footer .menu-links {
     list-style: none; }
   footer .country-list {
-    display: none; }
-  footer ul.country-list {
+    display: none;
     position: relative;
     top: -260px;
     height: 268px;
@@ -312,7 +315,7 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.15);
     list-style: none;
     padding-left: 0px; }
-    footer ul.country-list li {
+    footer .country-list li {
       border-bottom: 1px solid #aaa;
       padding: 3px 20px;
       font-size: 12px;
@@ -375,12 +378,8 @@ ul.tier3 {
   ul.tier3 > li a {
     border-bottom: 1px dotted #aaa;
     padding-left: 15px; }
-  ul.tier3 > li:last-child a {
-    border-bottom: none; }
   ul.tier3 > li:first-child a {
     border-top: none; }
-  ul.tier3 span {
-    width: auto; }
 ul.tier4 {
   border-left: 4px solid #007db8;
   padding: 0 0 0 15px; }
@@ -431,7 +430,7 @@ ul li.open > a > i.menu-indicator:before {
   .masthead .form-control {
     display: table-cell;
     padding: 6px 5px;
-    border-radius: 0; }
+    /*border-radius: 0;*/ }
   .masthead .input-group form div {
     padding: 0; }
   .masthead .input-group form button {

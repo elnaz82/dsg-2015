@@ -1,3 +1,5 @@
+var burl = location.href;
+
 $(document).ready(function () {
   var pageWidth = $('html').width();
 
@@ -48,8 +50,8 @@ $(document).ready(function () {
     //Interaction when clicking on facebook, twitter and linkedin
     $('.social-media-toolbar').on('click', 'a', function (e) {
       var parent = $(this).parent(),
-        u = location.href,
-        t = document.title;
+        url = location.href,
+        title = document.title;
 
       if (parent.hasClass('facebook')) {
         if (typeof s == 'object') {
@@ -64,7 +66,7 @@ $(document).ready(function () {
         //_gaq.push(['_trackSocial', 'Facebook', 'Share']);
 
         e.preventDefault();
-        window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(burl) + '&t=' + encodeURIComponent(t), 'facebook', 'width=480,height=240,toolbar=0,status=0,resizable=1');
+        window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(burl) + '&t=' + encodeURIComponent(title), 'facebook', 'width=480,height=240,toolbar=0,status=0,resizable=1');
       }
       else if (parent.hasClass('twitter')) {
         if (typeof s == 'object') {
@@ -81,7 +83,7 @@ $(document).ready(function () {
           burl = u;
         }
         e.preventDefault();
-        window.open('http://twitter.com/share?via=DellSoftware&url=' + encodeURIComponent(burl) + '&text=' + encodeURIComponent(t) + ',%20&counturl=' + encodeURIComponent(u), 'twitter', 'width=480,height=380,toolbar=0,status=0,resizable=1');
+        window.open('http://twitter.com/share?via=DellSoftware&url=' + encodeURIComponent(burl) + '&text=' + encodeURIComponent(title) + ',%20&counturl=' + encodeURIComponent(url), 'twitter', 'width=480,height=380,toolbar=0,status=0,resizable=1');
       }
       else if (parent.hasClass('linkedin')) {
         if (typeof s == 'object') {
@@ -95,7 +97,7 @@ $(document).ready(function () {
         //_gaq.push(['_trackSocial', 'LinkedIn', 'Share']);
 
         e.preventDefault();
-        window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(burl) + '&title=' + encodeURIComponent(t), 'linkedin', 'width=480,height=360,toolbar=0,status=0,resizable=1');
+        window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(burl) + '&title=' + encodeURIComponent(title), 'linkedin', 'width=480,height=360,toolbar=0,status=0,resizable=1');
       }
     });
   }

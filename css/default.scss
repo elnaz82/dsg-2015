@@ -22,14 +22,20 @@ li {
 }
 
 .pt-20 {
-  padding-top: 20px;
+  padding-top: 20px !important;
 }
 .pb-20 {
-  padding-bottom: 20px;
+  padding-bottom: 20px !important;
 }
 
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mt-10 {
+  margin-top: 10px !important;
+}
 .mt-20 {
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 .mb-0 {
@@ -38,19 +44,22 @@ li {
 .mb-10 {
   margin-bottom: 10px !important;
 }
+.mb-15 {
+  margin-bottom: 15px !important;
+}
 .mb-20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .mr-10 {
   margin-right: 10px !important;
 }
 .mr-20 {
-  margin-right: 20px;
+  margin-right: 20px !important;
 }
 
 .ml-20 {
-  margin-left: 20px;
+  margin-left: 20px !important;
 }
 
 .dsg-icon {
@@ -158,7 +167,13 @@ ul {
     float: left;
   }
   .mt-0-sm {
-    margin-top: 0;
+    margin-top: 0 !important;
+  }
+  .ml-20-sm {
+    margin-left: 20px !important;
+  }
+  .mr-20-sm {
+    margin-right: 20px !important;
   }
 }
 

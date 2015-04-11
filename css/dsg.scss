@@ -1,0 +1,29 @@
+// Core variables and mixins
+@import "dsg/variables-custom";
+@import "dsg/mixins";
+
+@import "dsg/custom-font-face";
+
+/*@import "dsg/normalize-custom";*/
+/*@import "dsg/scaffolding";*/
+
+header {
+  * {
+    @include box-sizing(border-box);
+  }
+  *:before,
+  *:after {
+    @include box-sizing(border-box);
+  }
+}
+
+
+@import "dsg/grid";
+@import "dsg/custom-header-footer";
+@import "dsg/forms";
+@import "dsg/navbar";
+
+@import "dsg/custom-dell-icons";
+
+@import "dsg/utilities";
+@import "dsg/responsive-utilities";

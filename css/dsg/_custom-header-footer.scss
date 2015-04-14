@@ -21,7 +21,7 @@
 }
 
 .masthead {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   color: #fff;
 
   .navbar {
@@ -366,7 +366,7 @@ footer {
   .footer-bottom-section {
     padding: 10px 15px 0 15px;
     font-size: 11px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     a, span {
       padding: 10px 0 9px 5px;
     }
@@ -513,6 +513,88 @@ ul {
   }
 }
 
+#list-countries-container {
+  position: relative;
+  display: inline-block;
+
+  img {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+#list-countries {
+  color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 16px;
+
+  >span {
+    background: url("/images/shared/sprites.png") -104px -128px no-repeat;
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+    vertical-align: bottom;
+    padding-top: 6px;
+  }
+}
+#list-countries-popup {
+  position: absolute;
+  right: -62px;
+  bottom: 16px;
+  padding: 0;
+  overflow: visible;
+  display: none;
+  -moz-box-shadow: 1px 1px 5px #000;
+  -webkit-box-shadow: 1px 1px 5px #000;
+  box-shadow: 1px 1px 5px #000;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  z-index: 9999;
+
+  > div:before,
+  #list-countries-popup > div:after {
+    position: absolute;
+    bottom: -10px;
+    right: 57px;
+    content: "";
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    z-index: 1;
+  }
+  >div:after {
+    box-shadow: 1px 1px 5px #000;
+  }
+  >div>div {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+  }
+  ul {
+    min-width: 100px;
+  }
+  a {
+    color: #0085c3;
+    font-size: 13px;
+    line-height: 16px;
+    display: block;
+    padding: 2px 5px;
+    white-space: nowrap;
+  }
+  a.active {
+    color: #fff;
+    background-color: #0085c3;
+  }
+}
+
 .ie-mobile-7 {
   .mh-searchform .icon-small-searchleft:before {
     content: 'Go';
@@ -523,7 +605,7 @@ ul {
   }
 }
 
-@media (max-width: 767px) { //XS
+/*@media (max-width: 767px) { //XS
   .shadow-overlay-left {
     width: 10px;
     height: 100%;
@@ -561,7 +643,7 @@ ul {
     .form-control {
       display: table-cell;
       padding: 6px 5px;
-      /*border-radius: 0;*/
+      /!*border-radius: 0;*!/
     }
     .input-group form {
       div {
@@ -632,9 +714,9 @@ ul {
       display: block;
     }
   }
-}
+}*/
 
-@media (min-width: 768px) { //SM
+//@media (min-width: 768px) { //SM
   .masthead {
     .container {
       margin-left: 0;
@@ -946,7 +1028,7 @@ ul {
       display: none;
     }
   }
-}
+//}
 
 @media (min-width: 768px) and (orientation: portrait) {
   .masthead {
@@ -993,7 +1075,7 @@ ul {
   }
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   .masthead {
     .utility-section, .main-nav-section {
       width: 1170px;
@@ -1010,7 +1092,7 @@ ul {
       width: 1170px;
     }
   }
-}
+}*/
 
 @media (min-width: 768px) and (max-width: 991px) {
   .masthead .container {

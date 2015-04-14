@@ -7,7 +7,9 @@
 /*@import "dsg/normalize-custom";*/
 /*@import "dsg/scaffolding";*/
 
-header {
+header, footer, .bootstrap {
+  min-width: 992px;
+
   * {
     @include box-sizing(border-box);
   }
@@ -17,6 +19,54 @@ header {
   }
 }
 
+#bottom-header {
+  .wrapper {
+    width: auto;
+  }
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.bg-light-grey {
+  background-color: #f9f9f9;
+  color: #444;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+.pb-20 {
+  pdading-bottom: 20px;
+}
+.pl-30 {
+  padding-left: 30px;
+}
+
+#top-header {
+  padding: 5px 0;
+  margin: 0 auto;
+  white-space: nowrap;
+
+  .message {
+    padding-left: 18px;
+  }
+  .row {
+    margin: 0;
+  }
+  li {
+    float: left;
+    margin: 0 10px;
+  }
+}
+
+.text-sm {
+  font-size: 11px;
+  line-height: 15px;
+}
 
 @import "dsg/grid";
 @import "dsg/custom-header-footer";

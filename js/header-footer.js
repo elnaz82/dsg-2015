@@ -32,4 +32,17 @@ $(document).ready(function () {
   $('body').on('click', '.dropdown', function() {
     $(this).toggleClass('open');
   });
+
+  /* Country Dropdown */
+
+  $('#list-countries').on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+
+    $('#list-countries-popup').toggle();
+  });
+
+  $('body').on('click', function () {
+    $('#list-countries-popup').hide();
+  });
 });

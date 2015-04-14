@@ -4123,8 +4123,8 @@ tbody.collapse.in {
       color: #cccccc; }
 
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #090909; }
+  background-color: #007db8;
+  border-color: #005a85; }
   .navbar-inverse .navbar-brand {
     color: #9d9d9d; }
     .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
@@ -4139,7 +4139,7 @@ tbody.collapse.in {
       background-color: transparent; }
   .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     color: white;
-    background-color: #090909; }
+    background-color: #005a85; }
   .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
     color: #444444;
     background-color: transparent; }
@@ -4151,15 +4151,15 @@ tbody.collapse.in {
       background-color: white; }
   .navbar-inverse .navbar-collapse,
   .navbar-inverse .navbar-form {
-    border-color: #101010; }
+    border-color: #006594; }
   .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #090909;
+    background-color: #005a85;
     color: white; }
   @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-      border-color: #090909; }
+      border-color: #005a85; }
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-      background-color: #090909; }
+      background-color: #005a85; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
       color: #9d9d9d; }
       .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4167,7 +4167,7 @@ tbody.collapse.in {
         background-color: transparent; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: white;
-      background-color: #090909; }
+      background-color: #005a85; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #444444;
       background-color: transparent; } }
@@ -4980,9 +4980,6 @@ button.close {
   position: relative;
   width: 100%; }
 
-#masthead .navbar-inverse {
-  background-color: #007db8; }
-
 .masthead-shadow-section {
   content: "";
   width: 80%;
@@ -5001,11 +4998,11 @@ button.close {
     border-radius: 0;
     z-index: 4050; }
   .masthead .navbar-inverse, .masthead .navbar-toggle {
-    border-color: transparent;
+    /*border-color: transparent;*/
     text-shadow: none;
-    background-color: transparent;
-    background-image: none;
-    background-repeat: no-repeat;
+    /*background-color: transparent;*/
+    /*background-image: none;*/
+    /*background-repeat: no-repeat;*/
     border: none;
     border-radius: 0; }
   .masthead .navbar-brand {
@@ -5270,7 +5267,7 @@ footer {
   footer .footer-bottom-section {
     padding: 10px 15px 0 15px;
     font-size: 11px;
-    overflow: hidden; }
+    /*overflow: hidden;*/ }
     footer .footer-bottom-section a, footer .footer-bottom-section span {
       padding: 10px 0 9px 5px; }
     footer .footer-bottom-section .list-inline > li a {
@@ -5377,6 +5374,76 @@ ul li.open > a > i.menu-indicator:before {
 .ie-mobile-7 .icon-small-searchleft:before {
   content: "Search"; }
 
+#list-countries-container {
+  position: relative;
+  display: inline-block; }
+  #list-countries-container img {
+    display: inline-block;
+    margin-right: 5px; }
+
+#list-countries {
+  color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 16px; }
+  #list-countries > span {
+    background: url("/images/shared/sprites.png") -104px -128px no-repeat;
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+    vertical-align: bottom;
+    padding-top: 6px; }
+
+#list-countries-popup {
+  position: absolute;
+  right: -62px;
+  bottom: 16px;
+  padding: 0;
+  overflow: visible;
+  display: none;
+  -moz-box-shadow: 1px 1px 5px #000;
+  -webkit-box-shadow: 1px 1px 5px #000;
+  box-shadow: 1px 1px 5px #000;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  z-index: 9999; }
+  #list-countries-popup > div:before,
+  #list-countries-popup #list-countries-popup > div:after {
+    position: absolute;
+    bottom: -10px;
+    right: 57px;
+    content: "";
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    z-index: 1; }
+  #list-countries-popup > div:after {
+    box-shadow: 1px 1px 5px #000; }
+  #list-countries-popup > div > div {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: 20px;
+    z-index: 2; }
+  #list-countries-popup ul {
+    min-width: 100px; }
+  #list-countries-popup a {
+    color: #0085c3;
+    font-size: 13px;
+    line-height: 16px;
+    display: block;
+    padding: 2px 5px;
+    white-space: nowrap; }
+  #list-countries-popup a.active {
+    color: #fff;
+    background-color: #0085c3; }
+
 @media (max-width: 767px) {
   .shadow-overlay-left {
     width: 10px;
@@ -5401,6 +5468,9 @@ ul li.open > a > i.menu-indicator:before {
 
   .masthead .navbar {
     z-index: 1049; }
+  .masthead .navbar-inverse, .masthead .navbar-toggle {
+    border-color: transparent;
+    background-color: transparent; }
   .masthead .input-group {
     width: 100%; }
     .masthead .input-group form {

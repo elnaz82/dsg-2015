@@ -1,0 +1,5 @@
+#list-countries-popup {
+  bottom: 21px; }
+
+.ie8 .bootstrap #list-countries-popup > div:before, .ie8 .bootstrap #list-countries-popup > div:after {
+  background-color: transparent; }

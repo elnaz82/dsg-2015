@@ -4,28 +4,35 @@
 
   img {
     display: inline-block;
+    margin-top: -3px;
     margin-right: 5px;
+  }
+
+  >a {
+    padding-left: 0;
   }
 }
 #list-countries {
   color: #fff;
   display: inline-block;
-  font-size: 13px;
-  line-height: 16px;
-
+  cursor: pointer;
+  > a {
+    color: #fff;
+  }
   >span {
     background: url("/images/shared/sprites.png") -104px -128px no-repeat;
     display: inline-block;
     width: 12px;
     height: 6px;
     vertical-align: bottom;
-    padding-top: 6px;
+    padding-top: 8px;
+    margin-left: 5px;
   }
 }
 #list-countries-popup {
   position: absolute;
-  right: -62px;
-  bottom: 16px;
+  right: -61px;
+  bottom: 26px;
   padding: 0;
   overflow: visible;
   display: none;
@@ -37,8 +44,7 @@
   -webkit-border-radius: 10px;
   z-index: 9999;
 
-  > div:before,
-  #list-countries-popup > div:after {
+  > div:before, > div:after {
     position: absolute;
     bottom: -10px;
     right: 57px;
@@ -77,5 +83,26 @@
   a.active {
     color: #fff;
     background-color: #0085c3;
+  }
+}
+
+@media (max-width: 767px) { //XS
+  #list-countries-container {
+    padding-left: 20px;
+
+    > a {
+      color: #444;
+      padding: 10px 0 9px 0;
+    }
+  }
+  #list-countries {
+    > span {
+      padding-top: 12px;
+    }
+  }
+  #list-countries-popup {
+    a {
+      padding: 5px;
+    }
   }
 }

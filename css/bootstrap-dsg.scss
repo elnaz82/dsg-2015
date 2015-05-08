@@ -1,0 +1,158 @@
+@import "bootstrap/custom-font-face";
+
+@-ms-viewport {
+  width: device-width;
+}
+
+.bootstrap {
+  color: #444444;
+  font-family: "Trebuchet MS", "Roboto", "Segoe UI", "Helvetica Neue", "Meiryo UI Reg", "メイリオ Reg", "MS UI Gothic Reg", "Hiragino Kaku Gothic Reg", "ヒラギノ角ゴ Pro W3 Reg", "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", "Microsoft JhengHei", "微軟正黑體", "Malgun Gothic", Gulim, Tahoma, "Arial Unicode", sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+
+  // Core variables and mixins
+  @import "bootstrap/variables-custom";
+  @import "bootstrap/mixins";
+
+  // Reset and dependencies
+  @import "bootstrap/normalize-custom";
+  @import "bootstrap/print";
+  @import "bootstrap/glyphicons-custom";
+
+  // Core CSS
+  @import "bootstrap/scaffolding";
+  @import "bootstrap/type-custom";
+  @import "bootstrap/code";
+  @import "bootstrap/grid-dsg";
+  //@import "bootstrap/grid";
+  @import "bootstrap/custom-grid-ext";
+  @import "bootstrap/tables";
+  @import "bootstrap/forms-custom";
+  @import "bootstrap/buttons";
+
+  // Components
+  @import "bootstrap/component-animations";
+  @import "bootstrap/dropdowns";
+  @import "bootstrap/button-groups";
+  @import "bootstrap/input-groups";
+  @import "bootstrap/navs";
+  @import "bootstrap/navbar";
+  @import "bootstrap/breadcrumbs";
+  @import "bootstrap/pagination";
+  @import "bootstrap/pager";
+  @import "bootstrap/labels";
+  @import "bootstrap/badges";
+  /*@import "bootstrap/jumbotron";*/
+  @import "bootstrap/thumbnails";
+  /*@import "bootstrap/alerts";*/
+  /*@import "bootstrap/progress-bars";*/
+  @import "bootstrap/media";
+  @import "bootstrap/list-group";
+  @import "bootstrap/panels";
+  @import "bootstrap/responsive-embed";
+  /*@import "bootstrap/wells";*/
+  @import "bootstrap/close";
+
+  @import "bootstrap/custom-dell-icons";
+  @import "bootstrap/custom-header-footer-dsg-v2";
+
+  // Components w/ JavaScript
+  /*@import "bootstrap/modals";*/
+  /*@import "bootstrap/tooltip";*/
+  /*@import "bootstrap/popovers";*/
+  @import "bootstrap/carousel";
+
+  // Utility classes
+  @import "bootstrap/utilities";
+  @import "bootstrap/responsive-utilities-dsg";
+
+  @import "bootstrap/custom";
+  @import "bootstrap/custom-affix-scroll-nav-top";
+
+  &.not-responsive {
+    .wrapper {
+      width: 967px;
+      min-width: 970px;
+      margin: 0 auto;
+    }
+    .container {
+      width: 970px;
+    }
+    footer {
+      margin-top: 0;
+      >div {
+        background-color: #0085c3;
+        min-width: 970px;
+      }
+    }
+
+    /*.hidden-xs, .hidden-sm, .hidden-md, .visible-xs, .visible-sm {
+      display: none !important;
+    }*/
+  }
+
+  &.is-responsive {
+    .wrapper {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .masthead {
+    margin-bottom: 0;
+  }
+
+  .btn {
+    line-height: 1.42857 !important;
+  }
+}
+
+@import "bootstrap/custom-fancybox";
+
+@media (max-width: 767px) {
+  //XS
+  .site-canvas {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: -moz-transform 500ms ease;
+    -o-transition: -o-transform 500ms ease;
+    transition: transform 500ms ease;
+  }
+  .openNav {
+    .site-canvas {
+      -webkit-transform: translate3d(-276px, 0, 0);
+      -moz-transform: translate3d(-276px, 0, 0);
+      -ms-transform: translate3d(-276px, 0, 0);
+      -o-transform: translate3d(-276px, 0, 0);
+      transform: translate3d(-276px, 0, 0);
+      -webkit-transition: -webkit-transform 500ms ease;
+      -moz-transition: -moz-transform 500ms ease;
+      -o-transition: -o-transform 500ms ease;
+      transition: transform 500ms ease;
+    }
+    .main-nav-section {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  //SM
+  .openNav {
+    .site-canvas {
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-transition: -webkit-transform 500ms ease;
+      -moz-transition: -moz-transform 500ms ease;
+      -o-transition: -o-transform 500ms ease;
+      transition: transform 500ms ease;
+    }
+  }
+}

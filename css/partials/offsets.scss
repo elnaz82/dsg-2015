@@ -1,0 +1,228 @@
+/*
+    Offsets (non Twitter Bootstrap)
+    Adds top and bottom offsets commonly used to tweak white space in pages
+*/
+
+.top-offset-0 {
+  margin-top: 0px;
+}
+.top-offset-5 {
+  margin-top: 5px;
+}
+.top-offset-10 {
+  margin-top: 10px;
+}
+.top-offset-20 {
+  margin-top: 20px;
+}
+.top-offset-30 {
+  margin-top: 30px;
+}
+.top-offset-40 {
+  margin-top: 40px;
+}
+.top-offset-60 {
+  margin-top: 60px;
+}
+
+.bottom-offset-0 {
+  margin-bottom: 0px;
+}
+.bottom-offset-5 {
+  margin-bottom: 5px;
+}
+.bottom-offset-10 {
+  margin-bottom: 10px;
+}
+.bottom-offset-20 {
+  margin-bottom: 20px;
+}
+.bottom-offset-30 {
+  margin-bottom: 30px;
+}
+.bottom-offset-40 {
+  margin-bottom: 40px;
+}
+.bottom-offset-60 {
+  margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 767px) {
+  .top-offset-xs-0 {
+    margin-top: 0px;
+  }
+  .top-offset-xs-5 {
+    margin-top: 5px;
+  }
+  .top-offset-xs-10 {
+    margin-top: 10px;
+  }
+  .top-offset-xs-20 {
+    margin-top: 20px;
+  }
+  .top-offset-xs-30 {
+    margin-top: 30px;
+  }
+  .top-offset-xs-40 {
+    margin-top: 40px;
+  }
+  .top-offset-xs-60 {
+    margin-top: 60px;
+  }
+  .bottom-offset-xs-0 {
+    margin-bottom: 0px;
+  }
+  .bottom-offset-xs-5 {
+    margin-bottom: 5px;
+  }
+  .bottom-offset-xs-10 {
+    margin-bottom: 10px;
+  }
+  .bottom-offset-xs-20 {
+    margin-bottom: 20px;
+  }
+  .bottom-offset-xs-30 {
+    margin-bottom: 30px;
+  }
+  .bottom-offset-xs-40 {
+    margin-bottom: 40px;
+  }
+  .bottom-offset-xs-60 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .top-offset-sm-0 {
+    margin-top: 0px;
+  }
+  .top-offset-sm-5 {
+    margin-top: 5px;
+  }
+  .top-offset-sm-10 {
+    margin-top: 10px;
+  }
+  .top-offset-sm-20 {
+    margin-top: 20px;
+  }
+  .top-offset-sm-30 {
+    margin-top: 30px;
+  }
+  .top-offset-sm-40 {
+    margin-top: 40px;
+  }
+  .top-offset-sm-60 {
+    margin-top: 60px;
+  }
+  .bottom-offset-sm-0 {
+    margin-bottom: 0px;
+  }
+  .bottom-offset-sm-5 {
+    margin-bottom: 5px;
+  }
+  .bottom-offset-sm-10 {
+    margin-bottom: 10px;
+  }
+  .bottom-offset-sm-20 {
+    margin-bottom: 20px;
+  }
+  .bottom-offset-sm-30 {
+    margin-bottom: 30px;
+  }
+  .bottom-offset-sm-40 {
+    margin-bottom: 40px;
+  }
+  .bottom-offset-sm-60 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .top-offset-md-0 {
+    margin-top: 0px;
+  }
+  .top-offset-md-5 {
+    margin-top: 5px;
+  }
+  .top-offset-md-10 {
+    margin-top: 10px;
+  }
+  .top-offset-md-20 {
+    margin-top: 20px;
+  }
+  .top-offset-md-30 {
+    margin-top: 30px;
+  }
+  .top-offset-md-40 {
+    margin-top: 40px;
+  }
+  .top-offset-md-60 {
+    margin-top: 60px;
+  }
+  .bottom-offset-md-0 {
+    margin-bottom: 0px;
+  }
+  .bottom-offset-md-5 {
+    margin-bottom: 5px;
+  }
+  .bottom-offset-md-10 {
+    margin-bottom: 10px;
+  }
+  .bottom-offset-md-20 {
+    margin-bottom: 20px;
+  }
+  .bottom-offset-md-30 {
+    margin-bottom: 30px;
+  }
+  .bottom-offset-md-40 {
+    margin-bottom: 40px;
+  }
+  .bottom-offset-md-60 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .top-offset-lg-0 {
+    margin-top: 0px;
+  }
+  .top-offset-lg-5 {
+    margin-top: 5px;
+  }
+  .top-offset-lg-10 {
+    margin-top: 10px;
+  }
+  .top-offset-lg-20 {
+    margin-top: 20px;
+  }
+  .top-offset-lg-30 {
+    margin-top: 30px;
+  }
+  .top-offset-lg-40 {
+    margin-top: 40px;
+  }
+  .top-offset-lg-60 {
+    margin-top: 60px;
+  }
+  .bottom-offset-lg-0 {
+    margin-bottom: 0px;
+  }
+  .bottom-offset-lg-5 {
+    margin-bottom: 5px;
+  }
+  .bottom-offset-lg-10 {
+    margin-bottom: 10px;
+  }
+  .bottom-offset-lg-20 {
+    margin-bottom: 20px;
+  }
+  .bottom-offset-lg-30 {
+    margin-bottom: 30px;
+  }
+  .bottom-offset-lg-40 {
+    margin-bottom: 40px;
+  }
+  .bottom-offset-lg-60 {
+    margin-bottom: 60px;
+  }
+}

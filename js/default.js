@@ -1,7 +1,9 @@
+  /* Used on Responsive New Header/Footer */
+
 var burl = location.href;
 
 $(document).ready(function () {
-  var pageWidth = $('html').width();
+  /*var pageWidth = $('html').width();
 
   if(pageWidth < 768) { //XS
     moveTo('.move-to-xs');
@@ -14,24 +16,40 @@ $(document).ready(function () {
   }
   else { //LG
     moveTo('.move-to-lg');
-  }
+  }*/
 
   //Social media toolbar
   if ($('.social-media-toolbar').length) {
-    //Google+
-    (function () {
-      var po = document.createElement('script');
-      po.type = 'text/javascript';
-      po.async = true;
-      po.src = '//apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(po, s);
-    })();
+    var bitlyURL = url = location.href;
+
+    //If protocol is https find previous page.
+    if(location.protocol == 'https:') {
+      var pathnameArr = location.pathname.split('/');
+
+      if(/(.*)t/.test(pathnameArr[1])) {
+        pathnameArr[1] = pathnameArr[1].replace(/(.*)t/, '$1');
+        bitlyURL = url = 'http://' + location.host + pathnameArr.join('/');
+      }
+    }
+
+    if($('.g-plusone').length) {
+      $('.g-plusone').attr('data-href', url);
+
+      //Google+
+      (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = '//apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+      })();
+    }
 
     //Retrieve bit.ly url
-    if (window.XMLHttpRequest && false) {
+    if (window.XMLHttpRequest && !(/\-/.test(location.host))) {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "/hidden/bitly.asmx/get?URI=" + encodeURIComponent('http://' + location.host + '/' + location.pathname));
+      xhr.open("GET", "/hidden/bitly.asmx/get?URI=" + encodeURIComponent(url));
       xhr.onreadystatechange = function () {
         if (xhr.readyState == 4) {
           if (xhr.status == 200) {
@@ -39,7 +57,7 @@ $(document).ready(function () {
             var obj = jQuery.parseJSON(xml.find("string").text());
 
             if (typeof obj.data != 'undefined') {
-              burl = obj.data.url;
+              bitlyURL = obj.data.url;
             }
           }
         }
@@ -49,9 +67,7 @@ $(document).ready(function () {
 
     //Interaction when clicking on facebook, twitter and linkedin
     $('.social-media-toolbar').on('click', 'a', function (e) {
-      var parent = $(this).parent(),
-        url = location.href,
-        title = document.title;
+      var parent = $(this).parent(), title = document.title;
 
       if (parent.hasClass('facebook')) {
         if (typeof s == 'object') {
@@ -66,7 +82,7 @@ $(document).ready(function () {
         //_gaq.push(['_trackSocial', 'Facebook', 'Share']);
 
         e.preventDefault();
-        window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(burl) + '&t=' + encodeURIComponent(title), 'facebook', 'width=480,height=240,toolbar=0,status=0,resizable=1');
+        window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(url) + '&t=' + encodeURIComponent(title), 'facebook', 'width=480,height=240,toolbar=0,status=0,resizable=1');
       }
       else if (parent.hasClass('twitter')) {
         if (typeof s == 'object') {
@@ -78,12 +94,11 @@ $(document).ready(function () {
           s.tl(true, 'o', 'Social Media');
         }
         //_gaq.push(['_trackSocial', 'Twitter', 'Tweet']);
+        console.log(bitlyURL);
+        console.log(url);
 
-        if (burl == '') {
-          burl = u;
-        }
         e.preventDefault();
-        window.open('http://twitter.com/share?via=DellSoftware&url=' + encodeURIComponent(burl) + '&text=' + encodeURIComponent(title) + ',%20&counturl=' + encodeURIComponent(url), 'twitter', 'width=480,height=380,toolbar=0,status=0,resizable=1');
+        window.open('http://twitter.com/share?via=DellSoftware&url=' + encodeURIComponent(bitlyURL) + '&text=' + encodeURIComponent(title) + ',%20&counturl=' + encodeURIComponent(url), 'twitter', 'width=480,height=380,toolbar=0,status=0,resizable=1');
       }
       else if (parent.hasClass('linkedin')) {
         if (typeof s == 'object') {
@@ -97,12 +112,39 @@ $(document).ready(function () {
         //_gaq.push(['_trackSocial', 'LinkedIn', 'Share']);
 
         e.preventDefault();
-        window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(burl) + '&title=' + encodeURIComponent(title), 'linkedin', 'width=480,height=360,toolbar=0,status=0,resizable=1');
+        window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title), 'linkedin', 'width=480,height=360,toolbar=0,status=0,resizable=1');
       }
     });
   }
+
+	//Workaround for select tag not having a placeholder (visual)
+	/*$('select').each(function() {
+		var ph = $(this).attr('placeholder');
+
+		//if(ph !== undefined) {
+			if($(this).val() == ph) {
+				$(this).css('color', '#999');
+			}
+
+			$(this).on('change', function() {
+				console.log('change');
+				console.log($(this).find(':selected').text() + ' - ' + $(this).attr('placeholder'));
+				if($(this).find(':selected').text() == $(this).attr('placeholder')) {
+					$(this).css('color', '#999');
+				}
+				else {
+					$(this).css('color', '');
+				}
+			});
+		//}
+	});*/
+
+  if($('html').hasClass('ie')) {
+		$('input').placeholder();
+	}
 });
 
+/*
 function moveTo(selector) {
   $(selector).each(function() {
     var target = $(this).data('target'), action = $(this).data('action');
@@ -117,4 +159,4 @@ function moveTo(selector) {
       $(target).append($(this));
     }
   });
-}
+}*/

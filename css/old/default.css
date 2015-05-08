@@ -84,7 +84,7 @@ li {
 ul.bullet-check-mark {
   padding-left: 2em; }
   ul.bullet-check-mark li {
-    list-style-image: url("/images/bullet-check-mark.png"); }
+    list-style-image: url("/images/shared/bullet-check-mark.png"); }
 
 .text-sm {
   font-size: 11px;

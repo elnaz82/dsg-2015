@@ -6,11 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
 
-  <!--[if !IE]><!-->
   <link rel="stylesheet" href="/css/bootstrap.css">
-  <![endif]-->
+
   <!--[if IE]>
-  <link rel="stylesheet" href="/css/bootstrap-ie.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-dsg-ie.css">
   <![endif]-->
 </head>
 <body>
@@ -30,9 +29,9 @@
 
             <div id="masthead-search" class="search-container">
               <form id="search-form">
-                <input id="search-input" type="text" class="search-query form-control"
+                <input id="searchterm" type="text" class="search-query form-control"
                        placeholder="What can we help you find?"/>
-                <button type="submit" class="btn">
+                <button type="submit" class="btn" onclick="goAllSearch3()">
                   <span class="hidden-xs">Search</span>
                   <i class="icon-small-searchleft visible-xs"></i>
                 </button>
@@ -42,7 +41,7 @@
 
             <!-- Links -->
             <ul class="utility">
-              <li id="mobile-search-button" class="dropdown hidden-sm hidden-md hidden-lg mobile-search-button">
+              <li id="mobile-search-button" class="dropdown visible-xs mobile-search-button">
                 <a href="#">
                   <i class="icon-small-searchleft"></i>
                 </a>
@@ -53,41 +52,48 @@
                   <i class="icon-small-useraccount"></i>
                   <span class="hidden-xs hidden-sm" id="sign-in"><span id="signin-button">Sign In</span></span>
                 </a>
+
                 <div role="menu" class="dropdown-menu">
                   <div class="col-xs-12">
-                    <h5 class="text-gray-dark">Dell Software Sign In</h5>
-                    <!--<div class="row sign-in-bullets">
-                      <ul>
-                        <li>Place orders quickly and easily</li>
-                        <li>View orders and track your shipping status</li>
-                        <li>Enjoy members-only rewards and discounts</li>
-                      </ul>
-                    </div>-->
+                    <h5 class="text-gray-dark not-logged-in">Dell Software Sign In</h5>
+
                     <div class="row">
-                      <div class="col-xs-12">
+                      <div class="col-xs-12 not-logged-in">
                         <a id="lnkmainloggin" class="flyout-btn">
-                          <button role="button" class="btn btn-primary btn-block bottom-offset-mini top-offset-small">Sign In</button>
+                          <button role="button" class="btn btn-primary btn-block bottom-offset-mini top-offset-small">Sign
+                            In
+                          </button>
                         </a>
                       </div>
-                      <div class="col-xs-12">
-                        <a href="https://software.dell.com/account/signin?urlback=" class="flyout-btn">
+                      <div class="col-xs-12 is-logged-in">
+                        <a id="lnkMyAccount" class="flyout-btn">
+                          <button role="button" class="btn btn-primary btn-block bottom-offset-mini top-offset-small">My
+                            Account
+                          </button>
+                        </a>
+                      </div>
+                      <div class="col-xs-12 is-logged-in">
+                        <a id="lnkmainloggOut" class="flyout-btn">
+                          <button role="button" class="btn btn-default btn-block bottom-offset-mini top-offset-small">Sign
+                            Out
+                          </button>
+                        </a>
+                      </div>
+                      <div class="col-xs-12 not-logged-in">
+                        <a href="/account/createaccount/" class="flyout-btn">
                           <button role="button" class="btn btn-block btn-default">Create an account</button>
                         </a>
                       </div>
                     </div>
-                    <!--<hr>
-                    <h5 class="flyout-signin">
-                      <a href="https://www.dell.com/identity/v2/discovery?cht=login&amp;~ck=mn">Premier Sign In</a>
-                    </h5>-->
                     <hr>
                     <h5 class="flyout-signin">
-                      <a href="http://partnerdirect.dell.com/sites/channel/en_us/pages/ADefault.aspx?~ck=mn">PartnerDirect Sign In</a>
+                      <a href="/partners/">PartnerDirect Sign In</a>
                     </h5>
                   </div>
                 </div>
               </li>
               <!-- Hamburger Menu (for tablets and phones)-->
-              <li class="hidden-sm hidden-md hidden-lg">
+              <li class="visible-xs">
                 <a href="#" class="navbar-toggle" data-toggle="site-menu">
                   <i class="icon-ui-menucollapsed"></i>
                 </a>
@@ -109,7 +115,7 @@
                 </a>
                 <ul class="tier2">
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/cloud-management/">
                       <span>Cloud Management</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
@@ -129,7 +135,7 @@
                     </ul>
                   </li>
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/data-protection/">
                       <span>Data Protection</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
@@ -174,7 +180,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/backup-and-recovery/">
                           <span>Backup &amp; Recovery</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -192,7 +198,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/deduplication-appliances/">
                           <span>Deduplication Appliances</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -208,7 +214,7 @@
                     </ul>
                   </li>
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/endpoint-management/">
                       <span>Endpoint Management</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
@@ -221,18 +227,7 @@
                           Authority Management Suite</a>
                       </li>
                       <li>
-                        <a href="/products/k1000-as-a-service/">K1000 as a Service</a>
-                      </li>
-                      <li>
-                        <a href="/products/k1000express/">K1000 Express</a>
-                      </li>
-                      <li>
-                        <a href="/products/kace-k1000-systems-management-appliance/">KACE
-                          K1000 Systems Management Appliance</a>
-                      </li>
-                      <li>
-                        <a href="/products/kace-k2000-systems-deployment-appliance/">KACE
-                          K2000 Systems Deployment Appliance</a>
+                        <a href="/kace/">KACE Product Line</a>
                       </li>
                       <li>
                         <a href="/products/remotescan-enterprise/">RemoteScan Enterprise</a>
@@ -240,13 +235,13 @@
                     </ul>
                   </li>
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/information-management/">
                       <span>Information Management</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
                     <ul class="tier3">
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/application-and-data-integration/">
                           <span>Application and Data Integration</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -257,7 +252,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/big-data-analytics/">
                           <span>Big Data Analytics</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -267,7 +262,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/business-intelligence/">
                           <span>Business Intelligence</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -278,7 +273,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/database-development-and-management/">
                           <span>Database Development &amp; Management</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -308,7 +303,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/database-replication-and-backup/">
                           <span>Database Replication &amp; Backup</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -323,13 +318,13 @@
                     </ul>
                   </li>
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/mobile-workforce-management/">
                       <span>Mobile Workforce Management</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
                     <ul class="tier3">
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/desktop-virtualization/">
                           <span>Desktop Virtualization</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -338,7 +333,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/endpoint-security/">
                           <span>Endpoint Security</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -347,14 +342,13 @@
                             Desktop</a></li>
                           <li><a href="/products/sonicwall-enforced-anti-virus/">Enforced
                             Anti-Virus and Anti-Spyware</a></li>
-                          <li><a href="/products/k1000-as-a-service/">K1000 as a Service</a></li>
-                          <li><a href="/products/k1000express/"> K1000 Express</a></li>
-                          <li><a href="/products/kace-k1000-systems-management-appliance/">KACE
-                            K1000 Systems Management Appliance</a></li>
+                          <li>
+                            <a href="/kace/">KACE Product Line</a>
+                          </li>
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/enterprise-mobility-management/">
                           <span>Enterprise Mobility Management</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -366,7 +360,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/network-security/">
                           <span>Network Security</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -388,7 +382,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/secure-mobile-access/">
                           <span>Secure Remote Access</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -405,7 +399,7 @@
                     </ul>
                   </li>
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/performance-monitoring/">
                       <span>Performance Monitoring</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
@@ -433,13 +427,13 @@
                     </ul>
                   </li>
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/security/">
                       <span>Security</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
                     <ul class="tier3">
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/email-security/">
                           <span>Email Security</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -457,7 +451,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/endpoint-management/">
                           <span>Endpoint Management</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -465,17 +459,15 @@
                           <li><a href="/products/changebase/">ChangeBASE</a></li>
                           <li><a href="/products/desktop-authority-management-suite/">Desktop
                             Authority Management Suite</a></li>
-                          <li><a href="/products/k1000-as-a-service/">K1000 as a Service</a></li>
-                          <li><a href="/products/kace-k1000-systems-management-appliance/">KACE
-                            K1000 Systems Management Appliance</a></li>
-                          <li><a href="/products/kace-k2000-systems-deployment-appliance/">KACE
-                            K2000 Systems Deployment Appliance</a></li>
+                          <li>
+                            <a href="/kace/">KACE Product Line</a>
+                          </li>
                           <li><a href="/products/remotescan-enterprise/">RemoteScan Enterprise</a>
                           </li>
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/endpoint-security/">
                           <span>Endpoint Security</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -484,13 +476,13 @@
                             Desktop</a></li>
                           <li><a href="/products/sonicwall-enforced-anti-virus/">Enforced
                             Anti-Virus and Anti-Spyware</a></li>
-                          <li><a href="/products/k1000-as-a-service/">K1000 as a Service</a></li>
-                          <li><a href="/products/kace-k1000-systems-management-appliance/">KACE
-                            K1000 Systems Management Appliance</a></li>
+                          <li>
+                            <a href="/kace/">KACE Product Line</a>
+                          </li>
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/identity-and-access-management/">
                           <span>Identity &amp; Access Management</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -510,7 +502,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/network-security/">
                           <span>Network Security</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -532,7 +524,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/secure-mobile-access/">
                           <span>Secure Remote Access</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -549,7 +541,7 @@
                     </ul>
                   </li>
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/virtualization-management/">
                       <span>Virtualization Management</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
@@ -569,7 +561,7 @@
                     </ul>
                   </li>
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/windows-server-management/">
                       <span>Windows Server Management</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
@@ -594,7 +586,7 @@
                     </ul>
                   </li>
                   <li class="subLinks">
-                    <a href="#">
+                    <a href="/solutions/windows-server-migration/">
                       <span>Windows Server Migration</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
@@ -622,7 +614,7 @@
                   </li>
                   <li class="subLinks">
                     <a href="#">
-                      <span>by Product Line</span>
+                      <span>By Product Line</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
                     <ul class="tier3">
@@ -633,7 +625,7 @@
                         <a href="#">Change Auditor</a>
                       </li>
                       <li>
-                        <a href="#">KACE</a>
+                        <a href="/kace/">KACE</a>
                       </li>
                       <li>
                         <a href="#">Migration Manager</a>
@@ -660,7 +652,7 @@
                   </li>
                   <li>
                     <a href="/products/">
-                      <span>view all Products</span>
+                      <span>View all Products</span>
                     </a>
                   </li>
                 </ul>
@@ -678,7 +670,7 @@
                     </a>
                     <ul class="tier3">
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/data-center-and-cloud-management/">
                           <span>Data Center &amp; Cloud Management</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -708,7 +700,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/data-protection/">
                           <span>Data Protection</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -727,7 +719,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/information-management/">
                           <span>Information Management</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -754,7 +746,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/mobile-workforce-management/">
                           <span>Mobile Workforce Management</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -779,7 +771,7 @@
                         </ul>
                       </li>
                       <li class="subLinks">
-                        <a href="#">
+                        <a href="/solutions/security/">
                           <span>Security</span>
                           <i class="menu-indicator pull-right"></i>
                         </a>
@@ -806,7 +798,7 @@
                   </li>
                   <li class="subLinks">
                     <a href="#">
-                      <span>by Platform</span>
+                      <span>By Platform</span>
                       <i class="menu-indicator pull-right"></i>
                     </a>
                     <ul class="tier3">
@@ -863,19 +855,25 @@
                   </li>
                   <li>
                     <a href="/solutions/">
-                      <span>view all Solutions</span>
+                      <span>View all Solutions</span>
                     </a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="/buy/">Buy</a>
-              </li>
-              <li>
                 <a href="/trials/">Trials</a>
               </li>
               <li>
+                <a href="/buy/">Buy</a>
+              </li>
+              <li>
                 <a href="http://support.software.dell.com">Support</a>
+              </li>
+              <li>
+                <a href="http://en.community.dell.com/techcenter/" target="_blank">Communities</a>
+              </li>
+              <li>
+                <a href="/partners/">Partners</a>
               </li>
             </ul>
           </div>
@@ -889,7 +887,7 @@
           <div class="text-center">
             <h1 class="text-left-md mb-20">Thank you for your interest in Building Higher IT Business Continuity in the Face of
               Disaster</h1>
-            <a class="btn btn-default">Download Your White Paper</a>
+            <a class="btn btn-default btn-block-xs">Download Your White Paper</a>
 
             <div class="social-media-toolbar">
               <span>Share</span>
@@ -919,7 +917,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-light-grey mt-20 pt-20 text-md">
+    <div class="bg-light-grey mt-20 pt-20 pb-20 text-md">
       <div class="container">
         <div id="secondary-cta" class="row">
           <div class="col-xs-12 col-sm-8 pull-right-sm col-md-6 col-md-offset-right-1">
@@ -956,7 +954,7 @@
     <footer id="footer">
       <div class="footer-top-section">
         <ul class="menu-links list-unstyled container">
-          <li>
+          <li class="subLinks">
             <span>About Us <i class="menu-indicator pull-right"></i></span>
             <ul>
               <li><a href="/company/">Company</a></li>
@@ -967,7 +965,7 @@
               <li><a href="/partners">Partners</a></li>
             </ul>
           </li>
-          <li>
+          <li class="subLinks">
             <span>Resources <i class="menu-indicator pull-right"></i></span>
             <ul>
               <li><a href="http://en.community.dell.com/techcenter/" target="_blank">Communities</a></li>
@@ -976,7 +974,7 @@
               <li><a href="/video-gallery/">Videos</a></li>
             </ul>
           </li>
-          <li>
+          <li class="subLinks">
             <span>Support <i class="menu-indicator pull-right"></i></span>
             <ul>
               <li><a href="https://support.software.dell.com/professional-services-product-select/"
@@ -988,7 +986,7 @@
                 & Certification</a></li>
             </ul>
           </li>
-          <li>
+          <li class="subLinks">
             <span>Social Networks <i class="menu-indicator pull-right"></i></span>
             <ul>
               <li><a href="http://www.facebook.com/dellsoftware" target="_blank">Facebook</a></li>
@@ -1000,23 +998,23 @@
               <li><a href="http://twitter.com/dellsoftware" target="_blank">Twitter</a></li>
             </ul>
           </li>
-          <li>
-            <div id="list-countries-container">
-              <img width="16" height="11" class="flag" src="/images/shared/us.gif" alt="United States">
-              <a id="list-countries"> United States <span>&nbsp;</span> </a>
-              <div id="list-countries-popup">
+          <li id="country-selector" class="subLinks">
+            <span>
+              <span id="current-country" class="flag-us">United States <span>&nbsp;</span></span>
+              <i class="menu-indicator pull-right"></i>
+            </span>
+            <div id="country-popup">
+              <div>
                 <div>
-                  <div>
-                    <ul>
-                      <li><a href="/"  class="active">United States (English)</a></li>
-                      <li><a href="/br-pt/" >Brazil (Português)</a></li>
-                      <li><a href="/cn-zh/" >China (中文)</a></li>
-                      <li><a href="/fr-fr/" >France (Français)</a></li>
-                      <li><a href="/de-de/">Germany (Deutsch)</a></li>
-                      <li><a href="/jp-ja/" >Japan (日本語)</a></li>
-                      <li><a href="/mx-es/" >Mexico (Español)</a></li>
-                    </ul>
-                  </div>
+                  <ul>
+                    <!--<li><a href="/" class="active">United States (English)</a></li>-->
+                    <li><a href="/br-pt/">Brazil (Português)</a></li>
+                    <li><a href="/cn-zh/">China (中文)</a></li>
+                    <li><a href="/fr-fr/">France (Français)</a></li>
+                    <li><a href="/de-de/">Germany (Deutsch)</a></li>
+                    <li><a href="/jp-ja/">Japan (日本語)</a></li>
+                    <li><a href="/mx-es/">Mexico (Español)</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1026,39 +1024,6 @@
 
       <div class="footer-shadow-section"></div>
 
-      <!-- Bottom Section Links -->
-      <!--<div class="footer-bottom-section">
-        <div class="menu-container">
-          <ul class="menu-links list-inline">
-            <li><span>©2015 Dell Inc. ALL RIGHTS RESERVED.</span></li>
-            <li><a href="/legal/">Terms of Use</a></li>
-            <li><a href="/legal/privacy.aspx">Privacy</a></li>
-            <li><a href="/feedback">Feedback</a></li>
-            <li>
-              <div id="list-countries-container">
-                <img width="16" height="11" class="flag" src="/images/shared/us.gif" alt="United States">
-                <a id="list-countries"> United States <span>&nbsp;</span> </a>
-                <div id="list-countries-popup">
-                  <div>
-                    <div>
-                      <ul>
-                        <li><a href="/"  class="active">United States (English)</a></li>
-                        <li><a href="/br-pt/" >Brazil (Português)</a></li>
-                        <li><a href="/cn-zh/" >China (中文)</a></li>
-                        <li><a href="/fr-fr/" >France (Français)</a></li>
-                        <li><a href="/de-de/">Germany (Deutsch)</a></li>
-                        <li><a href="/jp-ja/" >Japan (日本語)</a></li>
-                        <li><a href="/mx-es/" >Mexico (Español)</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>-->
-
       <div class="bg-light-grey hidden-xs">
         <div id="partners" class="pt-20 pb-20 text-sm container container-fluid">
           <aside class="row">
@@ -1066,11 +1031,6 @@
               <a href="http://www.boomi.com/" target="_blank">Boomi</a>
 
               <p>Cloud-based application integration</p>
-            </section>
-            <section class="col-sm-3 col-md-2">
-              <a href="http://www.dell.com/cloudmarketplace" target="_blank">Cloud Marketplace</a>
-
-              <p>Self-service unified cloud portal</p>
             </section>
             <section class="col-sm-3 col-md-2">
               <a href="http://www.enstratius.com/home" target="_blank">Enstratius</a>
@@ -1114,7 +1074,8 @@
 </div>
 
 <script src="/js/modernizr.min.js"></script>
-<script src="/js/jquery-2.1.3.min.js"></script>
+<script src="/js/jquery-1.9.1.min.js"></script>
+<script src="/js/jquery.color-2.1.2.min.js"></script>
 <script src="/js/bootstrap-3.3.4.min.js"></script>
 <script src="/js/responsive-header-footer.js"></script>
 <script src="/js/default.js"></script>

@@ -11,3 +11,59 @@
     }
   }
 }
+
+.ie9 {
+  #searchterm {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
+/*Elnaz adding fixes for DSG DP/Windows Soltuion Template vs. Dell STP Template A/B Test start*/
+
+.ie9 .bootstrap #affix-scroll-nav-top ul {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efefef', GradientType=0);
+}
+
+.ie8 {
+  .bootstrap #affix-scroll-nav-top ul {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efefef', GradientType=0);
+    li a {
+      display: inline-block;
+    }
+  }
+  .learn-work-section {
+    width: 100%;
+  }
+  #cta-floater {
+    width: 283px;
+  }
+  #learning-library #resources .item {
+    height: 248px;
+  }
+  #smalldevicesChatIcon, #relatedItems .carousel-control {
+    display: none;
+  }
+  .contact-drawer {
+    left: auto;
+    right: -290px;
+    position: fixed;
+    _position: absolute;
+    top: 220px;
+    _top: expression(eval(document.body.scrollTop));
+    .contact-drawer-tab {
+      background: url("/images/shared/ie8/contact-us-button.png") 0 0 no-repeat;
+      display: block;
+      width: 28px;
+      height: 100px;
+      top: -1px;
+      left: -60px;
+      &.change-btn-position {
+        top: -1px;
+        left: -30px;
+      }
+    }
+  }
+}
+
+/*Elnaz adding fixes for DSG DP/Windows Soltuion Template vs. Dell STP Template A/B Test end*/

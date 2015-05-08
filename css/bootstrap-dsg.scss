@@ -1,8 +1,12 @@
 @import "bootstrap/custom-font-face";
 
+@-ms-viewport {
+  width: device-width;
+}
+
 .bootstrap {
   color: #444444;
-  font-family: "Trebuchet MS","Roboto","Segoe UI","Helvetica Neue","Meiryo UI Reg","メイリオ Reg","MS UI Gothic Reg","Hiragino Kaku Gothic Reg","ヒラギノ角ゴ Pro W3 Reg","Microsoft YaHei","微软雅黑","Hiragino Sans GB","Microsoft JhengHei","微軟正黑體","Malgun Gothic",Gulim,Tahoma,"Arial Unicode",sans-serif;
+  font-family: "Trebuchet MS", "Roboto", "Segoe UI", "Helvetica Neue", "Meiryo UI Reg", "メイリオ Reg", "MS UI Gothic Reg", "Hiragino Kaku Gothic Reg", "ヒラギノ角ゴ Pro W3 Reg", "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", "Microsoft JhengHei", "微軟正黑體", "Malgun Gothic", Gulim, Tahoma, "Arial Unicode", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
 
@@ -13,13 +17,14 @@
   // Reset and dependencies
   @import "bootstrap/normalize-custom";
   @import "bootstrap/print";
-  @import "bootstrap/glyphicons";
+  @import "bootstrap/glyphicons-custom";
 
   // Core CSS
   @import "bootstrap/scaffolding";
   @import "bootstrap/type-custom";
   @import "bootstrap/code";
-  @import "bootstrap/grid";
+  @import "bootstrap/grid-dsg";
+  //@import "bootstrap/grid";
   @import "bootstrap/custom-grid-ext";
   @import "bootstrap/tables";
   @import "bootstrap/forms-custom";
@@ -59,7 +64,7 @@
 
   // Utility classes
   @import "bootstrap/utilities";
-  @import "bootstrap/responsive-utilities";
+  @import "bootstrap/responsive-utilities-dsg";
 
   @import "bootstrap/custom";
   @import "bootstrap/custom-affix-scroll-nav-top";
@@ -74,11 +79,16 @@
       width: 970px;
     }
     footer {
+      margin-top: 0;
       >div {
         background-color: #0085c3;
         min-width: 970px;
       }
     }
+
+    /*.hidden-xs, .hidden-sm, .hidden-md, .visible-xs, .visible-sm {
+      display: none !important;
+    }*/
   }
 
   &.is-responsive {
@@ -96,6 +106,8 @@
     line-height: 1.42857 !important;
   }
 }
+
+@import "bootstrap/custom-fancybox";
 
 @media (max-width: 767px) {
   //XS

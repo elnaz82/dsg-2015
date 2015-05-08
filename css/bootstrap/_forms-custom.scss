@@ -67,6 +67,15 @@ input[type="range"] {
   width: 100%;
 }
 
+//Remove dropdown arrow
+/*select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}*/
+
 // Make multiple select elements height not fixed
 select[multiple],
 select[size] {
@@ -397,13 +406,41 @@ input[type="checkbox"] {
 
   .form-control {
     background-color: $state-danger-bg;
-    background-image: url("/images/formError.png");
+    background-image: url("/images/shared/formError.png");
     background-position: 100% 50%;
     background-repeat: no-repeat;
   }
 
   select.form-control {
     background-position: 95% 50%;
+  }
+}
+
+.form-control {
+  &.error {
+    background-color: $state-danger-bg;
+    background-image: url("/images/shared/formError.png");
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+select {
+  &.form-control {
+    &.error {
+      background-position: 95% 50%;
+    }
+  }
+}
+
+.ie {
+  select.form-control {
+    &.error {
+      background-color: $state-danger-bg;
+      background-image: url("/images/shared/formError.png");
+      background-position: 95% 50%;
+      background-repeat: no-repeat;
+    }
   }
 }
 

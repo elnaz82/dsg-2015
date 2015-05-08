@@ -1,108 +1,99 @@
-#list-countries-container {
-  position: relative;
-  display: inline-block;
+.flag-us {
+  background: url("/images/shared/us.gif") 0 3px no-repeat;
+  padding-left: 20px !important;
+}
 
-  img {
-    display: inline-block;
-    margin-top: -3px;
-    margin-right: 5px;
+.flag-br {
+  background: url("/images/shared/flags/br.gif") 0 3px no-repeat;
+  padding-left: 20px !important;
+}
+
+@media (max-width: 767px) {
+  #country-selector {
+    > div {
+      display: none;
+      border-top: 1px solid #aaa;
+    }
+    &.open {
+      > div {
+        display: block;
+      }
+    }
   }
-
-  >a {
-    padding-left: 0;
+  #country-popup {
+    background-color: #fff;
   }
 }
-#list-countries {
-  color: #fff;
-  display: inline-block;
-  cursor: pointer;
-  > a {
-    color: #fff;
-  }
-  >span {
-    background: url("/images/shared/sprites.png") -104px -128px no-repeat;
-    display: inline-block;
-    width: 12px;
-    height: 6px;
-    vertical-align: bottom;
-    padding-top: 8px;
-    margin-left: 5px;
-  }
-}
-#list-countries-popup {
-  position: absolute;
-  right: -61px;
-  bottom: 26px;
-  padding: 0;
-  overflow: visible;
-  display: none;
-  -moz-box-shadow: 1px 1px 5px #000;
-  -webkit-box-shadow: 1px 1px 5px #000;
-  box-shadow: 1px 1px 5px #000;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  z-index: 9999;
 
-  > div:before, > div:after {
-    position: absolute;
-    bottom: -10px;
-    right: 57px;
-    content: "";
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    z-index: 1;
-  }
-  >div:after {
-    box-shadow: 1px 1px 5px #000;
-  }
-  >div>div {
+@media (min-width: 768px) {
+  #country-selector {
     position: relative;
-    background: #fff;
+  }
+  #current-country {
+    >span {
+      background: url("/images/shared/sprites.png") -104px -128px no-repeat;
+      display: inline-block;
+      width: 12px;
+      height: 6px;
+      vertical-align: bottom;
+      padding-top: 8px !important;
+      margin-left: 5px;
+    }
+  }
+  #country-popup {
+    display: none;
+    position: absolute;
+    right: -61px;
+    bottom: 26px;
+    padding: 0;
+    overflow: visible;
+    -moz-box-shadow: 1px 1px 5px #000;
+    -webkit-box-shadow: 1px 1px 5px #000;
+    box-shadow: 1px 1px 5px #000;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    padding: 20px;
-    z-index: 2;
-  }
-  ul {
-    min-width: 100px;
-  }
-  a {
-    color: #0085c3;
-    font-size: 13px;
-    line-height: 16px;
-    display: block;
-    padding: 2px 5px;
-    white-space: nowrap;
-  }
-  a.active {
-    color: #fff;
-    background-color: #0085c3;
-  }
-}
+    z-index: 9999;
 
-@media (max-width: 767px) { //XS
-  #list-countries-container {
-    padding-left: 20px;
-
-    > a {
-      color: #444;
-      padding: 10px 0 9px 0;
+    > div:before, > div:after {
+      position: absolute;
+      bottom: -10px;
+      right: 57px;
+      content: "";
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      z-index: 1;
     }
-  }
-  #list-countries {
-    > span {
-      padding-top: 12px;
+    >div:after {
+      box-shadow: 1px 1px 5px #000;
     }
-  }
-  #list-countries-popup {
+    >div>div {
+      position: relative;
+      background: #fff;
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      padding: 20px;
+      z-index: 2;
+    }
+    ul {
+      min-width: 100px;
+    }
     a {
-      padding: 5px;
+      color: #0085c3;
+      font-size: 13px;
+      line-height: 16px;
+      display: block;
+      padding: 2px 5px;
+      white-space: nowrap;
+    }
+    a.active {
+      color: #fff;
+      background-color: #0085c3;
     }
   }
 }

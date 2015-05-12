@@ -2230,6 +2230,8 @@
       cursor: not-allowed; }
   .bootstrap textarea.form-control {
     height: auto; }
+  .bootstrap select.form-control {
+    padding: 6px 8px; }
   .bootstrap input[type="search"] {
     -webkit-appearance: none; }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -2521,11 +2523,6 @@
     background-repeat: no-repeat; }
   .bootstrap select.form-control.error {
     background-position: 95% 50%; }
-  .bootstrap .ie select.form-control.error {
-    background-color: #ffffc9;
-    background-image: url("/images/shared/formError.png");
-    background-position: 95% 50%;
-    background-repeat: no-repeat; }
   .bootstrap .has-feedback label ~ .form-control-feedback {
     top: 25px; }
   .bootstrap .has-feedback label.sr-only ~ .form-control-feedback {
@@ -4735,6 +4732,21 @@
   .bootstrap .flag-br {
     background: url("/images/shared/flags/br.gif") 0 3px no-repeat;
     padding-left: 20px !important; }
+  .bootstrap .flag-de {
+    background: url("/images/shared/flags/de.gif") 0 3px no-repeat;
+    padding-left: 20px !important; }
+  .bootstrap .flag-cn {
+    background: url("/images/shared/flags/cn.gif") 0 3px no-repeat;
+    padding-left: 20px !important; }
+  .bootstrap .flag-fr {
+    background: url("/images/shared/flags/fr.gif") 0 3px no-repeat;
+    padding-left: 20px !important; }
+  .bootstrap .flag-jp {
+    background: url("/images/shared/flags/jp.gif") 0 3px no-repeat;
+    padding-left: 20px !important; }
+  .bootstrap .flag-mx {
+    background: url("/images/shared/flags/mx.gif") 0 3px no-repeat;
+    padding-left: 20px !important; }
   @media (max-width: 767px) {
     .bootstrap #country-selector > div {
       display: none;
@@ -5386,6 +5398,8 @@
       color: #007db8; }
   .bootstrap.not-responsive.no-touch ul.tier1 li:hover > ul {
     display: block; }
+  .bootstrap .img-border {
+    border: 1px solid #ccc; }
   .bootstrap .carousel {
     position: relative; }
   .bootstrap .carousel-inner {

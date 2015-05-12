@@ -1,13 +1,11 @@
-#list-countries-popup {
-  bottom: 21px; }
-
+/*$headings-font-family:    inherit !default;*/
 .ie8 .bootstrap #list-countries-popup > div:before, .ie8 .bootstrap #list-countries-popup > div:after {
   background-color: transparent; }
 
-.ie9 #searchterm {
-  padding-top: 4px;
-  padding-bottom: 4px; }
-
+@media (max-width: 767px) {
+  .ie9.openNav .site-canvas {
+    position: relative;
+    left: -276px; } }
 /*Elnaz adding fixes for DSG DP/Windows Soltuion Template vs. Dell STP Template A/B Test start*/
 .ie9 .bootstrap #affix-scroll-nav-top ul {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efefef', GradientType=0); }

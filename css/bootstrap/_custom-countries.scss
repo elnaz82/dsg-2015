@@ -8,6 +8,31 @@
   padding-left: 20px !important;
 }
 
+.flag-de {
+  background: url("/images/shared/flags/de.gif") 0 3px no-repeat;
+  padding-left: 20px !important;
+}
+
+.flag-cn {
+  background: url("/images/shared/flags/cn.gif") 0 3px no-repeat;
+  padding-left: 20px !important;
+}
+
+.flag-fr {
+  background: url("/images/shared/flags/fr.gif") 0 3px no-repeat;
+  padding-left: 20px !important;
+}
+
+.flag-jp {
+  background: url("/images/shared/flags/jp.gif") 0 3px no-repeat;
+  padding-left: 20px !important;
+}
+
+.flag-mx {
+  background: url("/images/shared/flags/mx.gif") 0 3px no-repeat;
+  padding-left: 20px !important;
+}
+
 @media (max-width: 767px) {
   #country-selector {
     > div {

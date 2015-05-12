@@ -1,0 +1,35 @@
+@import "bootstrap/variables-custom";
+
+.ie {
+  select.form-control {
+    &.error {
+      background-color: $state-danger-bg;
+      background-image: url("/images/shared/formError.png");
+      background-position: 95% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.ie9 {
+  #searchterm {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  select.form-control {
+    &.error {
+      background-position: 91% 50%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .ie9 {
+    &.openNav {
+      .site-canvas {
+        position: relative;
+        left: -276px;
+      }
+    }
+  }
+}

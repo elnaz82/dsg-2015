@@ -1,6 +1,4 @@
-#list-countries-popup {
-  bottom: 21px;
-}
+@import "bootstrap/variables-custom";
 
 .ie8 {
   .bootstrap {
@@ -12,10 +10,14 @@
   }
 }
 
-.ie9 {
-  #searchterm {
-    padding-top: 4px;
-    padding-bottom: 4px;
+@media (max-width: 767px) {
+  .ie9 {
+    &.openNav {
+      .site-canvas {
+        position: relative;
+        left: -276px;
+      }
+    }
   }
 }
 

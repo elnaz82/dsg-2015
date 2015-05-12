@@ -167,6 +167,9 @@ textarea.form-control {
   height: auto;
 }
 
+select.form-control {
+  padding: $padding-base-vertical 8px;
+}
 
 // Search inputs in iOS
 //
@@ -429,17 +432,6 @@ select {
   &.form-control {
     &.error {
       background-position: 95% 50%;
-    }
-  }
-}
-
-.ie {
-  select.form-control {
-    &.error {
-      background-color: $state-danger-bg;
-      background-image: url("/images/shared/formError.png");
-      background-position: 95% 50%;
-      background-repeat: no-repeat;
     }
   }
 }

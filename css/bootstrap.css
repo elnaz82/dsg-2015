@@ -2693,6 +2693,9 @@ output {
 textarea.form-control {
   height: auto; }
 
+select.form-control {
+  padding: 6px 8px; }
+
 input[type="search"] {
   -webkit-appearance: none; }
 
@@ -3011,12 +3014,6 @@ select[multiple].input-lg,
 
 select.form-control.error {
   background-position: 95% 50%; }
-
-.ie select.form-control.error {
-  background-color: #ffffc9;
-  background-image: url("/images/shared/formError.png");
-  background-position: 95% 50%;
-  background-repeat: no-repeat; }
 
 .has-feedback label ~ .form-control-feedback {
   top: 25px; }
@@ -5571,6 +5568,26 @@ i.menu-indicator {
   background: url("/images/shared/flags/br.gif") 0 3px no-repeat;
   padding-left: 20px !important; }
 
+.flag-de {
+  background: url("/images/shared/flags/de.gif") 0 3px no-repeat;
+  padding-left: 20px !important; }
+
+.flag-cn {
+  background: url("/images/shared/flags/cn.gif") 0 3px no-repeat;
+  padding-left: 20px !important; }
+
+.flag-fr {
+  background: url("/images/shared/flags/fr.gif") 0 3px no-repeat;
+  padding-left: 20px !important; }
+
+.flag-jp {
+  background: url("/images/shared/flags/jp.gif") 0 3px no-repeat;
+  padding-left: 20px !important; }
+
+.flag-mx {
+  background: url("/images/shared/flags/mx.gif") 0 3px no-repeat;
+  padding-left: 20px !important; }
+
 @media (max-width: 767px) {
   #country-selector > div {
     display: none;
@@ -6059,6 +6076,9 @@ i.menu-indicator {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 15px; }
+
+.img-border {
+  border: 1px solid #ccc; }
 
 /*@import "bootstrap/modals";*/
 /*@import "bootstrap/tooltip";*/
